@@ -23,9 +23,9 @@ export class LoginComponent {
   getApiUrl(username: string) {
     const [, domain] = username.split('@');
     if (domain === 'admin.com') {
-      return 'http://localhost:1111/checkAdmin';
+      return 'http://localhost:4444/checkAdmin';
     } else {
-      return 'http://localhost:1111/checkUser';
+      return 'http://localhost:4444/checkUser';
     }
   }
 

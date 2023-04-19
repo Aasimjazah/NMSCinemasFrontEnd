@@ -12,6 +12,7 @@ import { LoginComponent } from './MyComponent/login/login.component';
 import { AdminAreaComponent } from './MyComponent/admin-area/admin-area.component';
 import { UserServiceService } from './MyServices/user-service.service';
 import { FormsModule } from '@angular/forms';
+import { SignUpComponent } from './MyComponent/sign-up/sign-up.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FormsModule } from '@angular/forms';
     FooterComponent,
     DashboardComponent,
     LoginComponent,
-    AdminAreaComponent
+    AdminAreaComponent,
+    SignUpComponent
   ],
   imports: [
     BrowserModule,
