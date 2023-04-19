@@ -13,6 +13,8 @@ import { AdminAreaComponent } from './MyComponent/admin-area/admin-area.componen
 import { UserServiceService } from './MyServices/user-service.service';
 import { FormsModule } from '@angular/forms';
 import { SignUpComponent } from './MyComponent/sign-up/sign-up.component';
+import { UserAreaComponent } from './MyComponent/user-area/user-area.component';
+import { PublishShowComponent } from './MyComponent/publish-show/publish-show.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { SignUpComponent } from './MyComponent/sign-up/sign-up.component';
     DashboardComponent,
     LoginComponent,
     AdminAreaComponent,
-    SignUpComponent
+    SignUpComponent,
+    UserAreaComponent,
+    PublishShowComponent
   ],
   imports: [
     BrowserModule,
