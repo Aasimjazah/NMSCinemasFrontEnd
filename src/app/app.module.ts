@@ -15,6 +15,7 @@ import { FormsModule } from '@angular/forms';
 import { SignUpComponent } from './MyComponent/sign-up/sign-up.component';
 import { UserAreaComponent } from './MyComponent/user-area/user-area.component';
 import { PublishShowComponent } from './MyComponent/publish-show/publish-show.component';
+import { AllUsersComponent } from './MyComponent/all-users/all-users.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { PublishShowComponent } from './MyComponent/publish-show/publish-show.co
     AdminAreaComponent,
     SignUpComponent,
     UserAreaComponent,
-    PublishShowComponent
+    PublishShowComponent,
+    AllUsersComponent
   ],
   imports: [
     BrowserModule,
