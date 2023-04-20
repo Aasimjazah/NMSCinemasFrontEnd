@@ -8,13 +8,20 @@
         <div class="form-outline mb-4">
           <label class="form-label" for="form2Example1">Movie Name</label>
           <input style="float:left" name="movieName"  [(ngModel)]="ShowScreen.movieName" type="text" id="form2Example1" class="form-control" />
-        </div>
+        </div> <br> <br>
 
          <!--Category  input-->
-         <div class="form-outline mb-4">
+         <!-- <div class="form-outline mb-4">
           <label class="form-label" for="form2Example1">Language</label>
           <input name="language" type="text" [(ngModel)]="ShowScreen.language" id="form2Example2" class="form-control" />
-        </div>
+        </div> -->
+
+
+        <select name="language" [(ngModel)]="ShowScreen.language" class="form-select" aria-label="Default select example">
+          <option selected>Language</option>
+          <option value="Hindi">Hindi</option>
+          <option value="English">English</option>
+        </select>
 
          <!-- Kcal input -->
          <div class="form-outline mb-4">
