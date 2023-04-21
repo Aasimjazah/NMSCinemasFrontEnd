@@ -7,12 +7,14 @@ import { AdminAreaComponent } from './MyComponent/admin-area/admin-area.componen
 import { UserAreaComponent } from './MyComponent/user-area/user-area.component';
 import { PublishShowComponent } from './MyComponent/publish-show/publish-show.component';
 import { AllUsersComponent } from './MyComponent/all-users/all-users.component';
+import { AvailableShowsComponent } from './MyComponent/available-shows/available-shows.component';
 
 const routes: Routes = [
   {path:"signIn" , component:LoginComponent},
   {path:"", component:DashboardComponent},
   {path:"signUp" , component:SignUpComponent},
   {path:"userArea", component: UserAreaComponent},
+  { path: 'availableShows', component: AvailableShowsComponent },
   {path:"adminArea",component:AdminAreaComponent,
   children:
   [

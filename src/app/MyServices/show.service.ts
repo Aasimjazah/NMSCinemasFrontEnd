@@ -5,6 +5,9 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ShowService {
+  getAllMovies() {
+    return this.http.get<any>(`${this.baseUrl}/getAllMovie`);
+  }
   private baseUrl:string="http://localhost:4444";
   constructor(private http:HttpClient) { }
 
@@ -31,5 +34,10 @@ export class ShowService {
   getNameOrCategory(search:any)
   {
     return this.http.get<any>(`${this.baseUrl}/getNameOrCategory/`+search);
+  }
+
+  getShowByMovie(movieName:any)
+  {
+    return this.http.get<any>(`${this.baseUrl}/getShowByMovieName/`+movieName);
   }
 }

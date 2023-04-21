@@ -1,0 +1,103 @@
+<div class="container">
+<div class="movie-container">
+  <h1 style="color: azure;">{{movieName}}</h1>
+ 
+
+</div>
+
+<ul class="showcase">
+  <li>
+    <div class="seat"></div>
+    <small>N/A</small>
+  </li>
+  <li>
+    <div class="seat selected"></div>
+    <small>Selected</small>
+  </li>
+  <li>
+    <div class="seat occupied"></div>
+    <small>Occupied</small>
+  </li>
+</ul>
+
+<div *ngFor="let show of shows" class="container">
+  {{show | json}}
+  <div style="margin-left: 30%;" clas="row">
+    <h6 style="color: rgb(2, 2, 2);">Date {{show.date}}</h6>
+    <h6 style="color: rgb(2, 2, 2);">Time {{show.time}}</h6>
+    <h6 style="color: rgb(2, 2, 2);">Language {{show.language}}</h6>
+    <h6 style="color: rgb(2, 2, 2);">Ticket Price {{show.price}}</h6>
+  </div>
+  <div style="text-align: center;" class="screen">Screen</div>
+
+  <div class="row">
+    <div clickColor color='red' (click)="selectSeat(show,'a1')"  class="seat"></div>
+    <div clickColor color='#6feaf6' class="seat"></div>
+    <div clickColor color='#6feaf6' class="seat"></div>
+    <div clickColor color='#6feaf6' class="seat"></div>
+    <div clickColor color='#6feaf6' class="seat"></div>
+    <div clickColor color='#6feaf6' class="seat"></div>
+    <div clickColor color='#6feaf6' class="seat"></div>
+    <div clickColor color='#6feaf6' class="seat"></div>
+  </div>
+  <div class="row">
+    <div clickColor color='#6feaf6' class="seat"></div>
+    <div clickColor color='#6feaf6' class="seat"></div>
+    <div clickColor color='#6feaf6' class="seat"></div>
+    <div clickColor color='#6feaf6' class="seat"></div>
+    <div clickColor color='#6feaf6' class="seat"></div>
+    <div clickColor color='#6feaf6' class="seat"></div>
+    <div clickColor color='#6feaf6' class="seat"></div>
+    <div clickColor color='#6feaf6' class="seat"></div>
+  </div>
+  <div class="row">
+    <div clickColor color='#6feaf6' class="seat"></div>
+    <div clickColor color='#6feaf6' class="seat"></div>
+    <div clickColor color='#6feaf6' class="seat"></div>
+    <div clickColor color='#6feaf6' class="seat"></div>
+    <div clickColor color='#6feaf6' class="seat"></div>
+    <div clickColor color='#6feaf6' class="seat"></div>
+    <div clickColor color='#6feaf6' class="seat"></div>
+    <div clickColor color='#6feaf6' class="seat"></div>
+  </div>
+  <div class="row">
+    <div clickColor color='#6feaf6' class="seat"></div>
+    <div clickColor color='#6feaf6' class="seat"></div>
+    <div clickColor color='#6feaf6' class="seat"></div>
+    <div clickColor color='#6feaf6' class="seat"></div>
+    <div clickColor color='#6feaf6' class="seat"></div>
+    <div clickColor color='#6feaf6' class="seat"></div>
+    <div clickColor color='#6feaf6' class="seat"></div>
+    <div clickColor color='#6feaf6' class="seat"></div>
+  </div>
+  <div class="row">
+    <div clickColor color='#6feaf6' class="seat"></div>
+    <div clickColor color='#6feaf6' class="seat"></div>
+    <div clickColor color='#6feaf6' class="seat"></div>
+    <div clickColor color='#6feaf6' class="seat"></div>
+    <div clickColor color='#6feaf6' class="seat"></div>
+    <div clickColor color='#6feaf6' class="seat"></div>
+    <div clickColor color='#6feaf6' class="seat"></div>
+    <div clickColor color='#6feaf6' class="seat"></div>
+  </div>
+  <div class="row">
+    <div clickColor color='#6feaf6' class="seat"></div>
+    <div clickColor color='#6feaf6' class="seat"></div>
+    <div clickColor color='#6feaf6' class="seat"></div>
+    <div clickColor color='#6feaf6' class="seat"></div>
+    <div clickColor color='#6feaf6' class="seat"></div>
+    <div clickColor color='#6feaf6' class="seat"></div>
+    <div clickColor color='#6feaf6' class="seat"></div>
+    <div clickColor color='#6feaf6' class="seat"></div>
+  </div>
+
+ 
+    <input style="margin-left: 45%;" class="btn btn-success" type="Submit" value="Book Seats" (click)="book(show)">
+    <hr>
+</div>
+
+<p class="text">
+  You have selected <span id="count">0</span> seats for a price of $<span
+    id="total"
+    >0</span>
+  </div>

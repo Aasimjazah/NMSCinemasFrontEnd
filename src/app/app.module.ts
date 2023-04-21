@@ -16,6 +16,8 @@ import { SignUpComponent } from './MyComponent/sign-up/sign-up.component';
 import { UserAreaComponent } from './MyComponent/user-area/user-area.component';
 import { PublishShowComponent } from './MyComponent/publish-show/publish-show.component';
 import { AllUsersComponent } from './MyComponent/all-users/all-users.component';
+import { AvailableShowsComponent } from './MyComponent/available-shows/available-shows.component';
+import { ClickcolorDirective } from './clickcolor.directive';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { AllUsersComponent } from './MyComponent/all-users/all-users.component';
     SignUpComponent,
     UserAreaComponent,
     PublishShowComponent,
-    AllUsersComponent
+    AllUsersComponent,
+    AvailableShowsComponent,
+    ClickcolorDirective
   ],
   imports: [
     BrowserModule,

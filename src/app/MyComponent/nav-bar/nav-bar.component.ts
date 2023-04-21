@@ -24,7 +24,7 @@ export class NavBarComponent {
   }
 
   ngOnInit(): void {
-    this.user = sessionStorage.getItem("user") as string;
+    this.user = sessionStorage.getItem("user");
     this.user=JSON.parse(this.user);
 
   }
