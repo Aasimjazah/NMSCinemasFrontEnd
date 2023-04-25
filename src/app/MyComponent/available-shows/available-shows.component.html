@@ -21,7 +21,7 @@
 </ul>
 
 <div *ngFor="let show of shows" class="container">
-  {{show | json}}
+
   <div style="margin-left: 30%;" clas="row">
     <h6 style="color: rgb(2, 2, 2);">Date {{show.date}}</h6>
     <h6 style="color: rgb(2, 2, 2);">Time {{show.time}}</h6>
@@ -31,24 +31,24 @@
   <div style="text-align: center;" class="screen">Screen</div>
 
   <div class="row">
-    <div clickColor color='red' (click)="selectSeat(show,'a1')"  class="seat"></div>
-    <div clickColor color='#6feaf6' class="seat"></div>
-    <div clickColor color='#6feaf6' class="seat"></div>
-    <div clickColor color='#6feaf6' class="seat"></div>
-    <div clickColor color='#6feaf6' class="seat"></div>
-    <div clickColor color='#6feaf6' class="seat"></div>
-    <div clickColor color='#6feaf6' class="seat"></div>
-    <div clickColor color='#6feaf6' class="seat"></div>
+    <div clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'a1')"></div>
+    <div clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'a2')"></div>
+    <div clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'a3')"></div>
+    <div clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'a4')"></div>
+    <div clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'a5')"></div>
+    <div clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'a6')"></div>
+    <div clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'a7')"></div>
+    <div clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'a8')"></div>
   </div>
   <div class="row">
-    <div clickColor color='#6feaf6' class="seat"></div>
-    <div clickColor color='#6feaf6' class="seat"></div>
-    <div clickColor color='#6feaf6' class="seat"></div>
-    <div clickColor color='#6feaf6' class="seat"></div>
-    <div clickColor color='#6feaf6' class="seat"></div>
-    <div clickColor color='#6feaf6' class="seat"></div>
-    <div clickColor color='#6feaf6' class="seat"></div>
-    <div clickColor color='#6feaf6' class="seat"></div>
+    <div clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'b1')"></div>
+    <div clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'b2')"></div>
+    <div clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'b3')"></div>
+    <div clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'b4')"></div>
+    <div clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'b5')"></div>
+    <div clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'b6')"></div>
+    <div clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'b7')"></div>
+    <div clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'b8')"></div>
   </div>
   <div class="row">
     <div clickColor color='#6feaf6' class="seat"></div>
@@ -92,7 +92,7 @@
   </div>
 
  
-    <input style="margin-left: 45%;" class="btn btn-success" type="Submit" value="Book Seats" (click)="book(show)">
+    <input style="margin-left: 45%;" class="btn btn-success" type="Submit" value="Book Seats" (click)="showBook()">
     <hr>
 </div>
 
