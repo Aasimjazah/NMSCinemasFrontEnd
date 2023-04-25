@@ -40,4 +40,10 @@ export class ShowService {
   {
     return this.http.get<any>(`${this.baseUrl}/getShowByMovieName/`+movieName);
   }
+
+  updateShowById(show:any)
+  {
+    console.log(show)
+    return this.http.post<any>(`${this.baseUrl}/updateShowById`,show);
+  }
 }
