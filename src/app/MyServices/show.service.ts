@@ -46,4 +46,9 @@ export class ShowService {
     console.log(show)
     return this.http.post<any>(`${this.baseUrl}/updateShowById`,show);
   }
+
+  addBooking(ticketBooking:any)
+  {
+    return this.http.post<any>(`${this.baseUrl}/addBooking`,ticketBooking);
+  }
 }

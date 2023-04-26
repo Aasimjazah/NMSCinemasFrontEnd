@@ -22,7 +22,7 @@
 
 <div *ngFor="let show of shows" class="container">
 
-  <div style="margin-left: 30%;" clas="row">
+  <div style="margin-left: 30%;" class="row">
     <h6 style="color: rgb(2, 2, 2);">Date {{show.date}}</h6>
     <h6 style="color: rgb(2, 2, 2);">Time {{show.time}}</h6>
     <h6 style="color: rgb(2, 2, 2);">Language {{show.language}}</h6>
@@ -31,64 +31,177 @@
   <div style="text-align: center;" class="screen">Screen</div>
 
   <div class="row">
-    <div clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'a1')"></div>
-    <div clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'a2')"></div>
-    <div clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'a3')"></div>
-    <div clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'a4')"></div>
-    <div clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'a5')"></div>
-    <div clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'a6')"></div>
-    <div clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'a7')"></div>
-    <div clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'a8')"></div>
+    <div *ngIf="show.a1=='available'" clickColor  color='#6feaf6' class="seat" (click)="selectSeat(show,'a1')"></div>
+    <div *ngIf="show.a1!='available'" style="background-color: red;" class="seat"></div>
+
+    <div *ngIf="show.a2=='available'" clickColor  color='#6feaf6' class="seat" (click)="selectSeat(show,'a2')"></div>
+    <div *ngIf="show.a2!='available'" style="background-color: red;" class="seat"></div>
+
+    <div *ngIf="show.a3=='available'" clickColor  color='#6feaf6' class="seat" (click)="selectSeat(show,'a3')"></div>
+    <div *ngIf="show.a3!='available'" style="background-color: red;" class="seat"></div>
+
+    <div *ngIf="show.a4=='available'" clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'a4')"></div>
+    <div *ngIf="show.a4!='available'" style="background-color: red;" class="seat" ></div>
+
+    <div *ngIf="show.a5=='available'" clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'a5')"></div>
+    <div *ngIf="show.a5!='available'" style="background-color: red;" class="seat" ></div>
+
+    <div *ngIf="show.a6=='available'" clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'a6')"></div>
+    <div *ngIf="show.a6!='available'" style="background-color: red;" class="seat" ></div>
+
+    <div *ngIf="show.a7=='available'" clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'a7')"></div>
+    <div *ngIf="show.a7!='available'" style="background-color: red;" class="seat"></div>
+
+    <div *ngIf="show.a8=='available'" clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'a8')"></div>
+    <div *ngIf="show.a8!='available'" style="background-color: red;" class="seat" ></div>
+
+
+
   </div>
   <div class="row">
-    <div clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'b1')"></div>
-    <div clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'b2')"></div>
-    <div clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'b3')"></div>
-    <div clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'b4')"></div>
-    <div clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'b5')"></div>
-    <div clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'b6')"></div>
-    <div clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'b7')"></div>
-    <div clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'b8')"></div>
+    <div *ngIf="show.b1=='available'" clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'b1')"></div>
+    <div *ngIf="show.b1!='available'" style="background-color: red;" class="seat" ></div>
+   
+
+    <div *ngIf="show.b2=='available'" clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'b2')"></div>
+    <div *ngIf="show.b2!='available'" style="background-color: red;" class="seat" ></div>
+
+    <div *ngIf="show.b3=='available'" clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'b3')"></div>
+    <div *ngIf="show.b3!='available'" style="background-color: red;" class="seat" ></div>
+
+    <div *ngIf="show.b4=='available'" clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'b4')"></div>
+    <div *ngIf="show.b4!='available'" style="background-color: red;" class="seat" ></div>
+
+    <div *ngIf="show.b5=='available'" clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'b5')"></div>
+    <div *ngIf="show.b5!='available'" style="background-color: red;" class="seat" ></div>
+
+    <div *ngIf="show.b6=='available'" clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'b6')"></div>
+    <div *ngIf="show.b6!='available'" style="background-color: red;" class="seat" ></div>
+
+    <div *ngIf="show.b7=='available'" clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'b7')"></div>
+    <div *ngIf="show.b7!='available'" style="background-color: red;" class="seat" ></div>
+
+    <div *ngIf="show.b8=='available'" clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'b8')"></div>
+    <div *ngIf="show.b8!='available'" style="background-color: red;" class="seat" ></div>
+
+
   </div>
   <div class="row">
-    <div clickColor color='#6feaf6' class="seat"></div>
-    <div clickColor color='#6feaf6' class="seat"></div>
-    <div clickColor color='#6feaf6' class="seat"></div>
-    <div clickColor color='#6feaf6' class="seat"></div>
-    <div clickColor color='#6feaf6' class="seat"></div>
-    <div clickColor color='#6feaf6' class="seat"></div>
-    <div clickColor color='#6feaf6' class="seat"></div>
-    <div clickColor color='#6feaf6' class="seat"></div>
+    <div *ngIf="show.c1=='available'" clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'c1')"></div>
+    <div *ngIf="show.c1!='available'" style="background-color: red;" class="seat" ></div>
+
+    <div *ngIf="show.c2=='available'" clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'c2')"></div>
+    <div *ngIf="show.c2!='available'" style="background-color: red;" class="seat" ></div>
+
+    <div *ngIf="show.c3=='available'" clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'c3')"></div>
+    <div *ngIf="show.c3!='available'" style="background-color: red;" class="seat" ></div>
+
+    <div *ngIf="show.c4=='available'" clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'c4')"></div>
+    <div *ngIf="show.c4!='available'" style="background-color: red;" class="seat" ></div>
+
+    <div *ngIf="show.c5=='available'" clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'c5')"></div>
+    <div *ngIf="show.c5!='available'" style="background-color: red;" class="seat" ></div>
+
+    <div *ngIf="show.c6=='available'" clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'c6')"></div>
+    <div *ngIf="show.c6!='available'" style="background-color: red;" class="seat" ></div>
+
+    <div *ngIf="show.c7=='available'" clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'c7')"></div>
+    <div *ngIf="show.c7!='available'" style="background-color: red;" class="seat" ></div>
+
+    <div *ngIf="show.c8=='available'" clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'c8')"></div>
+    <div *ngIf="show.c8!='available'" style="background-color: red;" class="seat" ></div>
+
   </div>
   <div class="row">
-    <div clickColor color='#6feaf6' class="seat"></div>
-    <div clickColor color='#6feaf6' class="seat"></div>
-    <div clickColor color='#6feaf6' class="seat"></div>
-    <div clickColor color='#6feaf6' class="seat"></div>
-    <div clickColor color='#6feaf6' class="seat"></div>
-    <div clickColor color='#6feaf6' class="seat"></div>
-    <div clickColor color='#6feaf6' class="seat"></div>
-    <div clickColor color='#6feaf6' class="seat"></div>
+    <div *ngIf="show.d1=='available'" clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'d1')"></div>
+    <div *ngIf="show.d1!='available'" style="background-color: red;" class="seat" ></div>
+
+    <div *ngIf="show.d2=='available'" clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'d2')"></div>
+    <div *ngIf="show.d2!='available'" style="background-color: red;" class="seat" ></div>
+
+    <div *ngIf="show.d3=='available'" clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'d3')"></div>
+    <div *ngIf="show.d3!='available'" style="background-color: red;" class="seat" ></div>
+
+    <div *ngIf="show.d4=='available'" clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'d4')"></div>
+    <div *ngIf="show.d4!='available'" style="background-color: red;" class="seat" ></div>
+
+    <div *ngIf="show.d5=='available'" clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'d5')"></div>
+    <div *ngIf="show.d5!='available'" style="background-color: red;" class="seat" ></div>
+
+    <div *ngIf="show.d6=='available'" clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'d6')"></div>
+    <div *ngIf="show.d6!='available'" style="background-color: red;" class="seat" ></div>
+
+    <div *ngIf="show.d7=='available'" clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'d7')"></div>
+    <div *ngIf="show.d7!='available'" style="background-color: red;" class="seat" ></div>
+
+    <div *ngIf="show.d8=='available'" clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'d8')"></div>
+    <div *ngIf="show.d8!='available'" style="background-color: red;" class="seat" ></div>
+
   </div>
   <div class="row">
-    <div clickColor color='#6feaf6' class="seat"></div>
-    <div clickColor color='#6feaf6' class="seat"></div>
-    <div clickColor color='#6feaf6' class="seat"></div>
-    <div clickColor color='#6feaf6' class="seat"></div>
-    <div clickColor color='#6feaf6' class="seat"></div>
-    <div clickColor color='#6feaf6' class="seat"></div>
-    <div clickColor color='#6feaf6' class="seat"></div>
-    <div clickColor color='#6feaf6' class="seat"></div>
+    <div *ngIf="show.e1=='available'" clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'e1')"></div>
+    <div *ngIf="show.e1!='available'" style="background-color: red;" class="seat" ></div>
+
+    <div *ngIf="show.e2=='available'" clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'e2')"></div>
+    <div *ngIf="show.e2!='available'" style="background-color: red;" class="seat" ></div>
+
+
+    <div *ngIf="show.e3=='available'" clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'e3')"></div>
+    <div *ngIf="show.e3!='available'" style="background-color: red;" class="seat" ></div>
+
+
+    <div *ngIf="show.e4=='available'" clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'e4')"></div>
+    <div *ngIf="show.e4!='available'" style="background-color: red;" class="seat" ></div>
+
+
+    <div *ngIf="show.e5=='available'" clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'e5')"></div>
+    <div *ngIf="show.e5!='available'" style="background-color: red;" class="seat" ></div>
+
+
+    <div *ngIf="show.e6=='available'" clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'e6')"></div>
+    <div *ngIf="show.e6!='available'" style="background-color: red;" class="seat" ></div>
+
+
+    <div *ngIf="show.e7=='available'" clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'e7')"></div>
+    <div *ngIf="show.e7!='available'" style="background-color: red;" class="seat" ></div>
+
+    <div *ngIf="show.e8=='available'" clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'e8')"></div>
+    <div *ngIf="show.e8!='available'" style="background-color: red;" class="seat" ></div>
+
+
   </div>
   <div class="row">
-    <div clickColor color='#6feaf6' class="seat"></div>
-    <div clickColor color='#6feaf6' class="seat"></div>
-    <div clickColor color='#6feaf6' class="seat"></div>
-    <div clickColor color='#6feaf6' class="seat"></div>
-    <div clickColor color='#6feaf6' class="seat"></div>
-    <div clickColor color='#6feaf6' class="seat"></div>
-    <div clickColor color='#6feaf6' class="seat"></div>
-    <div clickColor color='#6feaf6' class="seat"></div>
+    <div *ngIf="show.f1=='available'" clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'f1')"></div>
+    <div *ngIf="show.f1!='available'" style="background-color: red;" class="seat" ></div>
+
+
+    <div *ngIf="show.f2=='available'" clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'f2')"></div>
+    <div *ngIf="show.f2!='available'" style="background-color: red;" class="seat" ></div>
+
+
+    <div *ngIf="show.f3=='available'" clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'f3')"></div>
+    <div *ngIf="show.f3!='available'" style="background-color: red;" class="seat" ></div>
+
+
+    <div *ngIf="show.f4=='available'" clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'f4')"></div>
+    <div *ngIf="show.f4!='available'" style="background-color: red;" class="seat" ></div>
+
+
+    <div *ngIf="show.f5=='available'" clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'f5')"></div>
+    <div *ngIf="show.f5!='available'" style="background-color: red;" class="seat" ></div>
+
+
+    <div *ngIf="show.f6=='available'" clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'f6')"></div>
+    <div *ngIf="show.f6!='available'" style="background-color: red;" class="seat" ></div>
+
+
+    <div *ngIf="show.f7=='available'" clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'f7')"></div>
+    <div *ngIf="show.f7!='available'" style="background-color: red;" class="seat" ></div>
+
+
+    <div *ngIf="show.f8=='available'" clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'f8')"></div>
+    <div *ngIf="show.f8!='available'" style="background-color: red;" class="seat" ></div>
+
   </div>
 
  
@@ -97,7 +210,5 @@
 </div>
 
 <p class="text">
-  You have selected <span id="count">0</span> seats for a price of $<span
-    id="total"
-    >0</span>
+  You have selected <span id="count">{{this.count}}</span> seats for a price of {{this.price}}
   </div>
