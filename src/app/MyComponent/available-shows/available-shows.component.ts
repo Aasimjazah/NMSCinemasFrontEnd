@@ -61,18 +61,20 @@ export class AvailableShowsComponent {
   }
 
 
-  selectSeat(show1: any, seatNo: string) {
-    if (seatNo == "a1") {
-      if (show1.a1 == "available") {
-        show1.a1 = this.user.email;
-        this.tickets.push("a1");
-        this.count += 1;
-      }
-      else {
-        show1.a1 = "available";
-        this.count -= 1;
-        const index = this.tickets.indexOf("a1");
-        const removedElement = this.tickets.splice(index, 1)[0];
+    selectSeat(show1: any, seatNo: string) {
+      if (seatNo == "a1") {
+        if (show1.a1 == "available") {
+          show1.a1 = this.user.email;
+          this.tickets.push("a1");
+          this.count += 1;
+        }
+        else {
+          show1.a1 = "available";
+          this.count -= 1;
+          const index = this.tickets.indexOf("a1");
+          if (index > -1) {
+            this.tickets.splice(index, 1);
+          }
         }
       }
     else if (seatNo == "a2") {
@@ -580,22 +582,9 @@ export class AvailableShowsComponent {
       this.ticketBooking.userId=this.user.email;
 
       console.log(this.ticketBooking);
-      // console.log("select seat calling", seatNo);
-      //      if(show1[seatNo]=="available")
-      //      {
-      //       console.log("inside if");
-      //       this.shows.seatNo = "asimjazah8@gmail.com";
-      //      }
-      //      else if(show1[seatNo]!="available")
-      //      {
-      //       console.log("inside else");
-
-      //       this.shows.seatNo = "available";
-      //      }
-      //      console.log("After selected seat",this.shows);
-
     }
 
+    
 
     showBook() {
       this.showService.updateShowById(this.show1).subscribe(
