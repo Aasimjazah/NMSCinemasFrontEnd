@@ -51,4 +51,9 @@ export class ShowService {
   {
     return this.http.post<any>(`${this.baseUrl}/addBooking`,ticketBooking);
   }
+
+  getTicketsByEmail(email:any)
+  {
+   return this.http.get<any>(`${this.baseUrl}/getTicketsByEmail/`+email);
+  }
 }

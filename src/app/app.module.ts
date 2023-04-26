@@ -18,6 +18,7 @@ import { PublishShowComponent } from './MyComponent/publish-show/publish-show.co
 import { AllUsersComponent } from './MyComponent/all-users/all-users.component';
 import { AvailableShowsComponent } from './MyComponent/available-shows/available-shows.component';
 import { ClickcolorDirective } from './clickcolor.directive';
+import { UserTicketComponent } from './MyComponent/user-ticket/user-ticket.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { ClickcolorDirective } from './clickcolor.directive';
     PublishShowComponent,
     AllUsersComponent,
     AvailableShowsComponent,
-    ClickcolorDirective
+    ClickcolorDirective,
+    UserTicketComponent
   ],
   imports: [
     BrowserModule,
