@@ -27,9 +27,9 @@ export class ShowService {
     return this.http.get<any>(`${this.baseUrl}/getProductById/`+id);
   }
 
-  getNameOrCategory(search:any)
+  getByMovieName(search:any)
   {
-    return this.http.get<any>(`${this.baseUrl}/getNameOrCategory/`+search);
+    return this.http.get<any>(`${this.baseUrl}/getByMovieName/`+search);
   }
 
   getShowByMovie(movieName:any)
