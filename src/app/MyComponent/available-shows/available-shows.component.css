@@ -102,3 +102,46 @@ p.text {
 p.text span {
   color: #6feaf6;
 }
+.ticket {
+  width: 400px;
+  background-color: #fff;
+  padding: 20px;
+  margin: 50px auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+h1 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 30px;
+  color: #ff5500;
+}
+h2 {
+  font-size: 24px;
+  color: #666;
+  margin-bottom: 20px;
+}
+p {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.col {
+  flex-basis: 50%;
+}
+.ticket-code {
+  font-size: 28px;
+  color: #ff5500;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.qr-code {
+  width: 80%;
+  margin: 0 auto;
+  display: block;
+}

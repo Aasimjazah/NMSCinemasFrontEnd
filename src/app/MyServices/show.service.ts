@@ -50,6 +50,6 @@ export class ShowService {
 
   getTicketsByEmail(email:any)
   {
-   return this.http.get<any>(`${this.baseUrl}/getTicketsByEmail`+email);
+   return this.http.get<any>(`${this.baseUrl}/getTicketsByEmail/`+email);
   }
 }

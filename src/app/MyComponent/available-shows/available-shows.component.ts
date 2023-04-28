@@ -10,7 +10,7 @@ import { UserServiceService } from 'src/app/MyServices/user-service.service';
   styleUrls: ['./available-shows.component.css']
 })
 export class AvailableShowsComponent {
-
+flag = false;
   movieName: any;
   shows: any;
   show1: any;
@@ -587,6 +587,7 @@ export class AvailableShowsComponent {
     
 
     showBook() {
+      this.flag = true;
       this.showService.updateShowById(this.show1).subscribe(
         response => {
           console.log(response);
@@ -597,7 +598,7 @@ export class AvailableShowsComponent {
       const tickets = this.tickets.join(",");
       this.ticketBooking.tickets=tickets;
       console.log(this.ticketBooking);
-
+      this.ticketBooking.price=this.price;
       this.showService.addBooking(this.ticketBooking).subscribe(
         response=>
         {
@@ -608,6 +609,11 @@ export class AvailableShowsComponent {
 
         }
       )
+    }
+
+    closeModel()
+    {
+      this.flag = false;
     }
 
   }
