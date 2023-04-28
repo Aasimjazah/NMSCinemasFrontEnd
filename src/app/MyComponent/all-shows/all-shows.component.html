@@ -4,15 +4,18 @@
             <tr>
                 
                 <th>Name</th>
+                <th>Image</th>
                 <th>imgname</th>
 
             </tr>
         </thead>
         <tbody class="tbody">
-            <tr *ngFor="let movie of movies;let i = index">
+            <tr *ngFor="let entry of movies | keyvalue;let i = index">
                 <td>{{i+1}}</td>
-                <td>{{ movie }}</td>
-                <input type="file" (change)="onFileSelected($event,movie)">
+                <td>{{ entry.key }}</td>
+                <td><img style="height: 30px; width: 30px;" src="{{entry.value}}"></td>
+
+                <input type="file" (change)="onFileSelected($event,entry.key)">
             </tr>
         </tbody>
     </table>

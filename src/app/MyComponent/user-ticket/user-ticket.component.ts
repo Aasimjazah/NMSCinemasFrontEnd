@@ -41,8 +41,7 @@ export class UserTicketComponent implements OnInit {
          this.ticketArray = show.tickets.split(",");
          this.initialPrice = parseInt(show.price, 10);
       }
-      
-      this.finalPrice=this.initialPrice*this.ticketArray.length;
+    
       console.log(this.finalPrice);
       console.log(this.ticketArray.length);
      

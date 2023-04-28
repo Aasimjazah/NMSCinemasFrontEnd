@@ -205,10 +205,56 @@
   </div>
 
     <br>
-    <input style="margin-left: 55%;" class="btn btn-success" type="Submit" value="Book Seats" (click)="showBook()">
+    <input  style="margin-left: 55%;" class="btn btn-success" type="Submit" value="Book Seats" (click)="showBook()">
     <hr>
 </div>
 
 <p class="text">
   You have selected <span id="count">{{this.count}}</span> seats for a price of {{this.price}}
   </div>
+
+
+ 
+ 
+  <!--Ticket Summary div starts here -->
+
+  <body *ngIf="flag==true">
+    <div class="ticket">
+        <h1>Your Ticket Summary</h1>
+        <div class="row">
+            <div class="col">
+                <h2>Title:</h2>
+                <p>{{show1.movieName}}</p>
+            </div>
+            <div class="col">
+                <h2>Date:</h2>
+                <p>{{show1.date}}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h2>Time:</h2>
+                <p>{{show1.time}}</p>
+            </div>
+            <div class="col">
+                <h2>Seat:</h2>
+                <p>{{tickets}}</p>
+            </div>
+        </div>
+
+        <h2>Price:</h2>
+      
+        <hr>
+        <p>total price {{price}}  </p>
+
+        
+    
+      <button (click)="closeModel()" class="btn btn-success">OK</button>
+  
+    </div>
+
+</body>
+
+  <!--Ticket Summary div starts here -->
+
+ 
