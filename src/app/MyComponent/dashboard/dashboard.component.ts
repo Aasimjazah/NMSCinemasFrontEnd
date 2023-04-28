@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { ShowService } from 'src/app/MyServices/show.service';
 import { UserServiceService } from 'src/app/MyServices/user-service.service';
@@ -136,4 +136,23 @@ export class DashboardComponent {
     }
   
      //searchMovie method ends here
+
+
+     //searchByLanguage method starts here
+     @ViewChild('languageSelect') languageSelect: any;
+
+     searchByLanguage() {
+       const selectedValue = this.languageSelect.nativeElement.value;
+       this.showService.getMovieByLanguage(selectedValue).subscribe(
+        response=>
+        {
+           this.products=response;
+        },
+        error=>
+        {
+
+        }
+       )
+       // Do something with the selected value
+     }
 }

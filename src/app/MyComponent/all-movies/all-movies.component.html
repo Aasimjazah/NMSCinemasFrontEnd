@@ -1,0 +1,30 @@
+<div class="container">
+    <table style="background-color: white;" class="table table-striped ">
+        <thead class="thead-dark">
+            <tr>
+                <th>S NO.</th>
+                <th>Movie Name</th>
+                <th>Language</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Price</th>
+                <th>Image</th>
+                <th>Status</th>
+
+            </tr>
+        </thead>
+        <tbody class="tbody">
+            <tr *ngFor="let show of shows;let i = index">
+                <td>{{i+1}}</td>
+                <td>{{ show.movieName }}</td>
+                <td>{{ show.language }}</td>
+                <td>{{ show.date }}</td>
+                <td>{{ show.time }}</td>
+                <th>{{ show.price}}</th>
+                <td><a data-toggle="modal" data-target="#uploadModal "><img style="width:30%;height:30%"src={{show.imgName}} /></a></td>
+                <td>{{ show.status }}</td>
+                <td><button (click)="changeStatus(show.id)" class="btn btn-danger">disable</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

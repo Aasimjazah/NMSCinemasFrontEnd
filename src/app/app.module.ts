@@ -20,6 +20,7 @@ import { AvailableShowsComponent } from './MyComponent/available-shows/available
 import { ClickcolorDirective } from './clickcolor.directive';
 import { UserTicketComponent } from './MyComponent/user-ticket/user-ticket.component';
 import { AllShowsComponent } from './MyComponent/all-shows/all-shows.component';
+import { AllMoviesComponent } from './MyComponent/all-movies/all-movies.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { AllShowsComponent } from './MyComponent/all-shows/all-shows.component';
     AvailableShowsComponent,
     ClickcolorDirective,
     UserTicketComponent,
-    AllShowsComponent
+    AllShowsComponent,
+    AllMoviesComponent
   ],
   imports: [
     BrowserModule,
