@@ -28,6 +28,7 @@ export class DashboardComponent {
 
     this.showService.getAllMovies().subscribe(response => {
       this.products = response;
+      console.log(response);
     },
       error => {
 

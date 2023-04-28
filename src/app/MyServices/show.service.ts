@@ -11,10 +11,6 @@ export class ShowService {
   private baseUrl:string="http://localhost:4444";
   constructor(private http:HttpClient) { }
 
-  getProducts()
-  {
-    return this.http.get<any>(`${this.baseUrl}/getProducts`);
-  }
 
   addProduct(data:any)
   {
@@ -54,6 +50,6 @@ export class ShowService {
 
   getTicketsByEmail(email:any)
   {
-   return this.http.get<any>(`${this.baseUrl}/getTicketsByEmail/`+email);
+   return this.http.get<any>(`${this.baseUrl}/getTicketsByEmail`+email);
   }
 }
