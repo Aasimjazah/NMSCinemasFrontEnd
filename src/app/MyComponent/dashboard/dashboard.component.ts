@@ -24,27 +24,16 @@ export class DashboardComponent {
 
     let userTemp = sessionStorage.getItem('user') as string;
     this.user = JSON.parse(userTemp);
-    console.log(this.user);
 
     this.showService.getAllMovies().subscribe(response => {
       this.products = response;
-      console.log(response);
     },
       error => {
 
       })
   }
 
-  breakdown(product: any) {
-    this.flag = false;
-    console.log(product);
-    this.product = product;
-    window.scroll(0, 0);
-  }
-
-  breakdownOff() {
-    this.flag = true;
-  }
+  
   // order() {
   //   if (this.user != null) {
   //     const product = JSON.stringify(this.product);
@@ -128,20 +117,23 @@ export class DashboardComponent {
   // signUp method ends here
 
 
-  //search method starts here
-  searchProduct:any;
-  // search()
-  // {
-  //   console.log("inside search function");
-  //   console.log(this.searchProduct);
-  //   this.productService.getNameOrCategory(this.searchProduct).subscribe(
-  //     response=>{
-  //       this.products = response;
-  //     },
-  //     error=>
-  //     {
-
-  //     }
-  //   )
-  // }
+    //searchMovie method starts here
+    searchProduct:any;
+    searchMovie()
+    {
+      console.log("inside search function");
+      console.log(this.searchProduct);
+      this.showService.getByMovieName(this.searchProduct).subscribe(
+        response=>{
+          this.products = response;
+          console.log(response);
+        },
+        error=>
+        {
+  
+        }
+      )
+    }
+  
+     //searchMovie method ends here
 }

@@ -19,7 +19,6 @@ saveState(state: any) {
 
 getState(): any {
  const state = localStorage.getItem(this.key);
- console.log("get state calling",state);
  return state ? state : "main";
 }
 }
