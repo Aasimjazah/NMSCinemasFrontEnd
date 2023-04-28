@@ -9,6 +9,7 @@ import { PublishShowComponent } from './MyComponent/publish-show/publish-show.co
 import { AllUsersComponent } from './MyComponent/all-users/all-users.component';
 import { AvailableShowsComponent } from './MyComponent/available-shows/available-shows.component';
 import { UserTicketComponent } from './MyComponent/user-ticket/user-ticket.component';
+import { AllShowsComponent } from './MyComponent/all-shows/all-shows.component';
 
 const routes: Routes = [
   { path: "signIn", component: LoginComponent },
@@ -30,6 +31,7 @@ const routes: Routes = [
 
         { path: "publishShow", component: PublishShowComponent },
         { path: "allUsers", component: AllUsersComponent },
+        { path: "allShows", component: AllShowsComponent }
       ]
 
 
