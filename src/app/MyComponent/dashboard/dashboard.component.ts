@@ -33,7 +33,7 @@ export class DashboardComponent {
       })
   }
 
-  
+
   // order() {
   //   if (this.user != null) {
   //     const product = JSON.stringify(this.product);
@@ -123,6 +123,17 @@ export class DashboardComponent {
     {
       console.log("inside search function");
       console.log(this.searchProduct);
+
+      if(this.searchProduct=="")
+      {
+        this.showService.getAllMovies().subscribe(response => {
+          this.products = response;
+        },
+          error => {
+
+          })
+      }
+
       this.showService.getByMovieName(this.searchProduct).subscribe(
         response=>{
           this.products = response;
@@ -130,11 +141,11 @@ export class DashboardComponent {
         },
         error=>
         {
-  
+
         }
       )
     }
-  
+
      //searchMovie method ends here
 
 
@@ -143,6 +154,15 @@ export class DashboardComponent {
 
      searchByLanguage() {
        const selectedValue = this.languageSelect.nativeElement.value;
+       if(selectedValue=="All")
+       {
+        this.showService.getAllMovies().subscribe(response => {
+          this.products = response;
+        },
+          error => {
+
+          })
+       }
        this.showService.getMovieByLanguage(selectedValue).subscribe(
         response=>
         {
