@@ -24,7 +24,7 @@ flag = false;
     gender:"",
     pno:"",
     password:""
- 
+
    };
 
    ticketBooking:any=
@@ -38,7 +38,7 @@ flag = false;
     tickets:"",
     userId:""
    }
- 
+
   constructor(private route: ActivatedRoute, private showService: ShowService, private userService: UserServiceService) { }
 
   ngOnInit() {
@@ -584,17 +584,18 @@ flag = false;
       console.log(this.ticketBooking);
     }
 
-    
+
 
     showBook() {
       this.flag = true;
+      window.scrollTo({ top: 0, behavior: 'smooth' });
       this.showService.updateShowById(this.show1).subscribe(
         response => {
           console.log(response);
         },
         error => { }
       )
-     
+
       const tickets = this.tickets.join(",");
       this.ticketBooking.tickets=tickets;
       console.log(this.ticketBooking);

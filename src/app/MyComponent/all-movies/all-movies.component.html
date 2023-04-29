@@ -23,7 +23,7 @@
                 <th>{{ show.price}}</th>
                 <td><a data-toggle="modal" data-target="#uploadModal "><img style="width:30%;height:30%"src={{show.imgName}} /></a></td>
                 <td>{{ show.status }}</td>
-                <td><button (click)="changeStatus(show.id)" class="btn btn-danger">disable</button></td>
+                <td><button (click)="changeStatus(show.id,'disabled')" class="btn btn-danger">disable</button></td>
             </tr>
         </tbody>
     </table>

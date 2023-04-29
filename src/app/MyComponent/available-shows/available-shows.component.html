@@ -1,9 +1,52 @@
 <div class="container">
 <div class="movie-container">
   <h1 style="color: azure;">{{movieName}}</h1>
- 
+
 
 </div>
+
+
+  <!--Ticket Summary div starts here -->
+
+  <body *ngIf="flag==true">
+    <div class="ticket">
+        <h1>Your Ticket Summary</h1>
+        <div class="row">
+            <div class="col">
+                <h2>Title:</h2>
+                <p>{{show1.movieName}}</p>
+            </div>
+            <div class="col">
+                <h2>Date:</h2>
+                <p>{{show1.date}}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h2>Time:</h2>
+                <p>{{show1.time}}</p>
+            </div>
+            <div class="col">
+                <h2>Seat:</h2>
+                <p>{{tickets}}</p>
+            </div>
+        </div>
+
+        <h2>Price:</h2>
+
+        <hr>
+        <p>total price {{price}}  </p>
+
+
+
+      <button (click)="closeModel()" class="btn btn-success">OK</button>
+
+    </div>
+
+</body>
+
+  <!--Ticket Summary div starts here -->
+
 
 <ul class="showcase">
   <li>
@@ -61,7 +104,7 @@
   <div class="row">
     <div *ngIf="show.b1=='available'" clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'b1')"><span style="color: aliceblue;">b1</span></div>
     <div *ngIf="show.b1!='available'" style="background-color: red;" class="seat" ><span style="color: aliceblue;">b1</span></div>
-   
+
 
     <div *ngIf="show.b2=='available'" clickColor color='#6feaf6' class="seat" (click)="selectSeat(show,'b2')"><span style="color: aliceblue;">b2</span></div>
     <div *ngIf="show.b2!='available'" style="background-color: red;" class="seat" ><span style="color: aliceblue;">b2</span></div>
@@ -214,47 +257,5 @@
   </div>
 
 
- 
- 
-  <!--Ticket Summary div starts here -->
 
-  <body *ngIf="flag==true">
-    <div class="ticket">
-        <h1>Your Ticket Summary</h1>
-        <div class="row">
-            <div class="col">
-                <h2>Title:</h2>
-                <p>{{show1.movieName}}</p>
-            </div>
-            <div class="col">
-                <h2>Date:</h2>
-                <p>{{show1.date}}</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <h2>Time:</h2>
-                <p>{{show1.time}}</p>
-            </div>
-            <div class="col">
-                <h2>Seat:</h2>
-                <p>{{tickets}}</p>
-            </div>
-        </div>
 
-        <h2>Price:</h2>
-      
-        <hr>
-        <p>total price {{price}}  </p>
-
-        
-    
-      <button (click)="closeModel()" class="btn btn-success">OK</button>
-  
-    </div>
-
-</body>
-
-  <!--Ticket Summary div starts here -->
-
- 

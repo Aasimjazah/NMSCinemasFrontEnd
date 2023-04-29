@@ -11,9 +11,9 @@ export class AllMoviesComponent implements OnInit {
   productId:number=0;
   shows:any=
   {
-    
+
   };
-  
+
   constructor(private showService:ShowService){}
   ngOnInit(): void {
       this.showService.getAllShows().subscribe(response=>
@@ -26,9 +26,17 @@ export class AllMoviesComponent implements OnInit {
 
         });
   }
-    
-  changeStatus(id:any)
+
+  changeStatus(id:any, status:any)
   {
-      
+    this.showService.changeShowStatusById(id, status).subscribe(response=>
+      {
+       console.log(response);
+       this.shows=response;
+      },
+      error=>
+      {
+
+      });
   }
-} 
+}

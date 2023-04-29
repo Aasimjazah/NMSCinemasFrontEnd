@@ -62,4 +62,10 @@ export class ShowService {
   {
      return this.http.get<any>(`${this.baseUrl}/getAllShows`);
   }
+
+  changeShowStatusById(id:any, status:any)
+  {
+    console.log(id)
+    return this.http.post<any>(`${this.baseUrl}/changeShowStatus/`+id,status);
+  }
 }

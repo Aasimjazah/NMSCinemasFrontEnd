@@ -10,7 +10,7 @@
   border: 0;
   border-radius: 5px;
   font-size: 14px;
-  margin-left: 10px;
+  margin-left: 8px;
   padding: 5px 15px 5px 15px;
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -82,7 +82,7 @@ margin-left: 30%;
 
 .row {
   display: flex;
-  margin-left: 40%;
+  margin-left: 35%;
 }
 
 .screen {
@@ -102,6 +102,9 @@ p.text {
 p.text span {
   color: #6feaf6;
 }
+
+
+
 .ticket {
   width: 400px;
   background-color: #fff;
@@ -120,28 +123,12 @@ h2 {
   color: #666;
   margin-bottom: 20px;
 }
-p {
-  font-size: 18px;
-  color: #333;
-  margin-bottom: 10px;
-}
-.row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
-}
-.col {
-  flex-basis: 50%;
-}
+
+
 .ticket-code {
   font-size: 28px;
   color: #ff5500;
   text-align: center;
   margin-bottom: 20px;
 }
-.qr-code {
-  width: 80%;
-  margin: 0 auto;
-  display: block;
-}
+
